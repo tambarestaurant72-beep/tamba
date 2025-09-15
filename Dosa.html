@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="hi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>veg tandoori snacks • Premium Menu</title>
+  <title>Momos • Premium Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -24,7 +24,7 @@
         var(--bg);
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 24px;
     }
@@ -43,27 +43,39 @@
     .menu-grid {
       margin-top: 24px;
       display: grid;
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
     }
     .dish {
       background: var(--card);
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.08);
       border-radius: 16px;
-      padding: 16px;
+      padding: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .dish:hover {
+      transform: translateY(-4px);
+    }
+    .dish img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
     }
     .dish-title {
       font-family: 'Playfair Display', serif;
       font-size: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .price-row {
       display: flex;
       justify-content: space-between;
-    }
-    .price-label {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
-      color: var(--yellow-deep); /* same color for both */
+      color: var(--yellow-deep);
     }
     footer {
       margin-top: 32px;
@@ -77,24 +89,75 @@
 
 <div class="container">
 
-  <!-- Veg Starters -->
-<header><h1>Dosa</h1></header>
+  <header><h1>Dosa</h1></header>
   <div class="menu-grid">
-    <div class="dish"><div class="dish-title">Masala Dosa</div><div class="price-row"><span class="price-label">₹90/-</span></div></div>
-    <div class="dish"><div class="dish-title">Plain Dosa</div><div class="price-row"><span class="price-label">₹60/-</span></div></div>
-    <div class="dish"><div class="dish-title">Rava Dosa</div><div class="price-row"><span class="price-label">₹80/-</span></div></div>
-    <div class="dish"><div class="dish-title">Paneer Dosa</div><div class="price-row"><span class="price-label">₹150/-</span></div></div>
-    <div class="dish"><div class="dish-title">Pyaz Dosa</div><div class="price-row"><span class="price-label">₹130/-</span></div></div>
-    <div class="dish"><div class="dish-title">Tamato Dosa</div><div class="price-row"><span class="price-label">₹110/-</span></div></div>
-    <div class="dish"><div class="dish-title">Idli Dosa</div><div class="price-row"><span class="price-label">₹140/-</span></div></div>
-    <div class="dish"><div class="dish-title">Bada Sambhar</div><div class="price-row"><span class="price-label">₹120/-</span></div></div>
-    <div class="dish"><div class="dish-title">Rice Sambhar</div><div class="price-row"><span class="price-label">₹100/-</span></div></div>
+
+    <div class="dish">
+      <img src="https://ranveerbrar.com/wp-content/uploads/2021/02/Masala-dosa-scaled.jpg" alt="Masala Dosa">
+      <div class="dish-title">Masala Dosa</div>
+      <div class="price-row"><span>₹90/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx-glTW9VpM8O7nW1los6X5F9VkIOaj07rgw&s" alt="Plain Dosa">
+      <div class="dish-title">Plain Dosa</div>
+      <div class="price-row"><span>₹60/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.cookwithmanali.com/wp-content/uploads/2020/06/Crispy-Rava-Dosa.jpg" alt="Rava Dosa">
+      <div class="dish-title">Rava Dosa</div>
+      <div class="price-row"><span>₹80/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://img-global.cpcdn.com/recipes/0fb63389fa1a3b3f/680x781cq80/masala-paneer-dosa-recipe-main-photo.jpg" alt="Paneer Dosa">
+      <div class="dish-title">Paneer Dosa</div>
+      <div class="price-row"><span>₹150/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStBeOeYW2O31YkMAzqSoR8ch4U-7PkeMrLTg&s" alt="Pyaz Dosa">
+      <div class="dish-title">Pyaz Dosa</div>
+      <div class="price-row"><span>₹130/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmqDo5KghROhg5gBSTkodqy-bSDD8xR0CdKw&s" alt="Tomato Dosa">
+      <div class="dish-title">Tomato Dosa</div>
+      <div class="price-row"><span>₹110/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtaWnmoYt0_4PKQH5u_MmvGCp6j8wEoCCb_PVd1xJgC5dqy98tSOJfAAKuwbMSW2OYjGTvVUbTrKMPNuiQnf0zGgqoe_-d-OeffL9iT2PlOPBq9Ht-Y6tpy-Xz91kOFpYtgo3L2-MYWDE/w480-h640/Idli+Dosa+Batter+in+MIxie+2.jpg" alt="Idli Dosa">
+      <div class="dish-title">Idli Dosa</div>
+      <div class="price-row"><span>₹140/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://i0.wp.com/www.blissofcooking.com/wp-content/uploads/2018/09/Vada-Sambar-MOP.jpg?resize=740%2C493&ssl=1" alt="Bada Sambhar">
+      <div class="dish-title">Bada Sambhar</div>
+      <div class="price-row"><span>₹120/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.jeyashriskitchen.com/wp-content/uploads/2024/06/IMG_5357-scaled.jpg" alt="Rice Sambhar">
+      <div class="dish-title">Rice Sambhar</div>
+      <div class="price-row"><span>₹100/-</span></div>
+    </div>
+
   </div>
 </div>
-    <footer>© <span id="year"></span> Premium Menu</footer>
+
+
   </div>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+</div>
+
+<footer>© <span id="year"></span> Premium Menu</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
