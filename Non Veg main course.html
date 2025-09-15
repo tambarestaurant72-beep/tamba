@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>veg tandoori snacks • Premium Menu</title>
+  <title>Momos • Premium Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -24,7 +24,7 @@
         var(--bg);
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 24px;
     }
@@ -43,27 +43,39 @@
     .menu-grid {
       margin-top: 24px;
       display: grid;
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
     }
     .dish {
       background: var(--card);
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.08);
       border-radius: 16px;
-      padding: 16px;
+      padding: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .dish:hover {
+      transform: translateY(-4px);
+    }
+    .dish img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
     }
     .dish-title {
       font-family: 'Playfair Display', serif;
       font-size: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .price-row {
       display: flex;
       justify-content: space-between;
-    }
-    .price-label {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
-      color: var(--yellow-deep); /* same color for both */
+      color: var(--yellow-deep);
     }
     footer {
       margin-top: 32px;
@@ -77,38 +89,128 @@
 
 <div class="container">
 
-  <!-- Veg Starters -->
-<header><h1>Non Veg Main Course</h1></header>
+  <header><h1>Non Veg Main Course</h1></header>
   <div class="menu-grid">
-   
-      <div class="dish"><div class="dish-title">Chicken Curry</div><div class="price-row"><span class="price-label">Quarter ₹160/-</span> <span class="price-label">Half ₹270/- </span><span class="price-label">Full ₹550/- </span></div></div>
-      <div class="dish"><div class="dish-title">Kadhai Chicken</div><div class="price-row"><span class="price-label">Quarter ₹160/- </span><span class="price-label">Half ₹300/-</span> <span class="price-label">Full ₹650/- </span></div></div>
-      <div class="dish"><div class="dish-title">Butter Chicken</div><div class="price-row"><span class="price-label">Quarter ₹160/- </span><span class="price-label">Half ₹300/-</span> <span class="price-label">Full ₹650/-</span> </div></div>
-      <div class="dish"><div class="dish-title">Chicken Handi</div><div class="price-row"><span class="price-label">Quarter ₹170/-</span><span class="price-label"> Half ₹320/-</span> <span class="price-label">Full ₹600/- </span></div></div>
-      <div class="dish"><div class="dish-title">Chicken Do Pyaza</div><div class="price-row"><span class="price-label">Quarter ₹170/- </span><span class="price-label">Half ₹320/-</span><span class="price-label"> Full ₹600/- </span></div></div>
-       <div class="dish"><div class="dish-title">Chicken Dhaniya Adraki</div><div class="price-row"><span class="price-label">Quarter ₹180/- </span><span class="price-label">Half ₹320/-</span><span class="price-label"> Full ₹600/- </span></div></div>
-     
-      <div class="dish"><div class="dish-title">Chicken Tikka Masala</div><div class="price-row"><span class="price-label">Quarter ₹190/- </span><span class="price-label">Half ₹320/-</span> <span class="price-label">Full ₹650/- </span></div></div>
-      <div class="dish"><div class="dish-title">Chicken Kali Mirch</div><div class="price-row"><span class="price-label">Quarter ₹210/- </span><span class="price-label">Half ₹370/-</span> <span class="price-label">Full ₹650/- </span></div></div>
-       <div class="dish"><div class="dish-title">Rara Chicken </div><div class="price-row"><span class="price-label">Quarter ₹160/- </span><span class="price-label">Half ₹320/-</span><span class="price-label"> Full ₹650/- </span></div></div>
-       <div class="dish"><div class="dish-title">Tawa Chicken </div><div class="price-row"><span class="price-label">Quarter ₹160/- </span><span class="price-label">Half ₹320/-</span><span class="price-label"> Full ₹650/- </span></div></div>
-      <div class="dish"><div class="dish-title">Chicken Lababdar</div><div class="price-row"><span class="price-label">Quarter ₹150/- </span><span class="price-label">Half ₹370/-</span><span class="price-label"> Full ₹570/- </span></div></div>
-      <div class="dish"><div class="dish-title">Chicken Bhadkila</div><div class="price-row"><span class="price-label">Quarter ₹160/- </span><span class="price-label">Half ₹330/-</span><span class="price-label"> Full ₹650/- </span></div></div>
-      <div class="dish"><div class="dish-title">Chicken Keema</div><div class="price-row"><span class="price-label">Quarter ₹180/- </span><span class="price-label">Half ₹350/-</span><span class="price-label"> Full ₹650/- </span></div></div>
-      <div class="dish"><div class="dish-title">Methi Malai Chicken</div><div class="price-row"><span class="price-label">Quarter ₹200/- </span><span class="price-label">Half ₹380/-</span><span class="price-label"> Full ₹700/- </span></div></div>
-      <div class="dish"><div class="dish-title">Mutton Handi</div><div class="price-row"><span class="price-label">Quarter ₹270/- </span><span class="price-label">Half ₹420/-</span><span class="price-label"> Full ₹750/- </span></div></div>
-     
-       <div class="dish"><div class="dish-title">Mutton Rogan Josh</div><div class="price-row"><span class="price-label">Quarter ₹250/- </span><span class="price-label">Half ₹400/-</span><span class="price-label"> Full ₹750/- </span></div></div>
-       <div class="dish"><div class="dish-title">Mutton Curry</div><div class="price-row"><span class="price-label">Quarter ₹260/- </span><span class="price-label">Half ₹400/-</span><span class="price-label"> Full ₹750/- </span></div></div>
-     
-       <div class="dish"><div class="dish-title">Mutton Sheek Masala</div><div class="price-row"><span class="price-label">Quarter ₹200/- </span><span class="price-label">Half ₹350/- </span><span class="price-label">Full ₹650/- </span></div></div>
+
+    <div class="dish">
+      <img src="https://www.whiskaffair.com/wp-content/uploads/2021/10/Andhra-Chicken-Curry-2-3.jpg" alt="Chicken Curry">
+      <div class="dish-title">Chicken Curry</div>
+      <div class="price-row"><span>Quarter ₹160/- | Half ₹270/- | Full ₹550/-</span></div>
     </div>
+
+    <div class="dish">
+      <img src="https://myfoodstory.com/wp-content/uploads/2021/09/karahi-chicken-kadai-chicken-1.jpg" alt="Kadhai Chicken">
+      <div class="dish-title">Kadhai Chicken</div>
+      <div class="price-row"><span>Quarter ₹160/- | Half ₹300/- | Full ₹650/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2023/04/butter-chicken-recipe.jpg" alt="Butter Chicken">
+      <div class="dish-title">Butter Chicken</div>
+      <div class="price-row"><span>Quarter ₹160/- | Half ₹300/- | Full ₹650/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://i0.wp.com/kalimirchbysmita.com/wp-content/uploads/2017/10/Chicken-Handi-05.jpg" alt="Chicken Handi">
+      <div class="dish-title">Chicken Handi</div>
+      <div class="price-row"><span>Quarter ₹170/- | Half ₹320/- | Full ₹600/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://sinfullyspicy.com/wp-content/uploads/2023/05/1200-by-1200-images-1.jpg" alt="Chicken Do Pyaza">
+      <div class="dish-title">Chicken Do Pyaza</div>
+      <div class="price-row"><span>Quarter ₹170/- | Half ₹320/- | Full ₹600/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://rdxvasantkunj.com/wp-content/uploads/2025/01/Chicken-Dhaniya-Adraki.jpg" alt="Chicken Dhaniya Adraki">
+      <div class="dish-title">Chicken Dhaniya Adraki</div>
+      <div class="price-row"><span>Quarter ₹180/- | Half ₹320/- | Full ₹600/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://dantoombs.com/wp-content/uploads/2025/06/Chicken-tikka-masala-735x980.jpg" alt="Chicken Tikka Masala">
+      <div class="dish-title">Chicken Tikka Masala</div>
+      <div class="price-row"><span>Quarter ₹190/- | Half ₹320/- | Full ₹650/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.whiskaffair.com/wp-content/uploads/2018/10/Chicken-Kali-Mirch-2-3.jpg" alt="Chicken Kali Mirch">
+      <div class="dish-title">Chicken Kali Mirch</div>
+      <div class="price-row"><span>Quarter ₹210/- | Half ₹370/- | Full ₹650/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://madscookhouse.com/wp-content/uploads/2022/05/Chicken-Rara-Masala-500x500.jpg" alt="Rara Chicken">
+      <div class="dish-title">Rara Chicken</div>
+      <div class="price-row"><span>Quarter ₹160/- | Half ₹320/- | Full ₹650/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://i.ytimg.com/vi/gyP2ClISl5M/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBk0wAwJLGHIgaRGW9aaBYN2jOMFA" alt="Tawa Chicken">
+      <div class="dish-title">Tawa Chicken</div>
+      <div class="price-row"><span>Quarter ₹160/- | Half ₹320/- | Full ₹650/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkVDVwndaom1rmd5nGlEHwS6dnO6v2VPE2cA&s" alt="Chicken Lababdar">
+      <div class="dish-title">Chicken Lababdar</div>
+      <div class="price-row"><span>Quarter ₹150/- | Half ₹370/- | Full ₹570/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://i.ytimg.com/vi/kuBlioXg4HE/hq720.jpg?sqp=-oaymwEYCJUDENAFSFryq4qpAwoIARUAAIhC0AEB&rs=AOn4CLCOweC0zzrhTJj7_ZYkWQgxRQVgYA" alt="Chicken Bhadkila">
+      <div class="dish-title">Chicken Bhadkila</div>
+      <div class="price-row"><span>Quarter ₹160/- | Half ₹330/- | Full ₹650/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://thecurrymommy.com/wp-content/uploads/2021/09/chicken-kheema-recipe-chicken-keema-recipe-indian-ground-mince-meat.jpg" alt="Chicken Keema">
+      <div class="dish-title">Chicken Keema</div>
+      <div class="price-row"><span>Quarter ₹180/- | Half ₹350/- | Full ₹650/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://aromaticessence.co/wp-content/uploads/2018/12/image2-2-1.jpeg" alt="Methi Malai Chicken">
+      <div class="dish-title">Methi Malai Chicken</div>
+      <div class="price-row"><span>Quarter ₹200/- | Half ₹380/- | Full ₹700/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://media-assets.swiggy.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/RX_THUMBNAIL/IMAGES/VENDOR/2024/4/10/88265039-2898-48cb-8918-4dbd07a2c4bc_867271.jpg" alt="Mutton Handi">
+      <div class="dish-title">Mutton Handi</div>
+      <div class="price-row"><span>Quarter ₹270/- | Half ₹420/- | Full ₹750/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Rogan_Josh_Kashmiri.jpg/330px-Rogan_Josh_Kashmiri.jpg" alt="Mutton Rogan Josh">
+      <div class="dish-title">Mutton Rogan Josh</div>
+      <div class="price-row"><span>Quarter ₹250/- | Half ₹400/- | Full ₹750/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2019/11/Mutton-Curry.jpg" alt="Mutton Curry">
+      <div class="dish-title">Mutton Curry</div>
+      <div class="price-row"><span>Quarter ₹260/- | Half ₹400/- | Full ₹750/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://static.toiimg.com/photo/58360750.cms" alt="Mutton Sheek Masala">
+      <div class="dish-title">Mutton Sheek Masala</div>
+      <div class="price-row"><span>Quarter ₹200/- | Half ₹350/- | Full ₹650/-</span></div>
+    </div>
+
   </div>
 </div>
-    <footer>© <span id="year"></span> Premium Menu</footer>
+
   </div>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+</div>
+
+<footer>© <span id="year"></span> Premium Menu</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
