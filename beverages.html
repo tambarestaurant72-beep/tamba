@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>veg tandoori snacks • Premium Menu</title>
+  <title>Momos • Premium Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -24,7 +24,7 @@
         var(--bg);
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 24px;
     }
@@ -43,27 +43,39 @@
     .menu-grid {
       margin-top: 24px;
       display: grid;
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
     }
     .dish {
       background: var(--card);
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.08);
       border-radius: 16px;
-      padding: 16px;
+      padding: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .dish:hover {
+      transform: translateY(-4px);
+    }
+    .dish img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
     }
     .dish-title {
       font-family: 'Playfair Display', serif;
       font-size: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .price-row {
       display: flex;
       justify-content: space-between;
-    }
-    .price-label {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
-      color: var(--yellow-deep); /* same color for both */
+      color: var(--yellow-deep);
     }
     footer {
       margin-top: 32px;
@@ -77,19 +89,37 @@
 
 <div class="container">
 
-  <!-- Veg Starters -->
-<header><h1>Beverages</h1></header>
+  <header><h1>Beverages</h1></header>
   <div class="menu-grid">
-    <div class="dish"><div class="dish-title">Chai</div><div class="price-row"><span class="price-label">₹50/-</span></div></div>
-    <div class="dish"><div class="dish-title">Hot Coffee</div><div class="price-row"><span class="price-label">₹80/-</span></div></div>
-    <div class="dish"><div class="dish-title">Coke Glass</div><div class="price-row"><span class="price-label">₹50/-</span></div></div>
-     </div>
+
+    <div class="dish">
+      <img src="https://budleaf.com/wp-content/uploads/2023/08/Adrak-masala-chai-1568x1045.jpeg" alt="beverages 1">
+      <div class="dish-title">Chai</div>
+      <div class="price-row"><span> ₹50/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://images.indianexpress.com/2021/01/coffee1200_getty.jpg" alt="beverages 2">
+      <div class="dish-title">Hot Coffee</div>
+      <div class="price-row"><span> ₹80/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://cdnimg.webstaurantstore.com/images/products/large/473849/1928114.jpg" alt="beverages 3">
+      <div class="dish-title">Coke Glass</div>
+      <div class="price-row"><span> ₹50/-</span></div>
+    </div>
+
+   
+
   </div>
 </div>
-    <footer>© <span id="year"></span> Premium Menu</footer>
-  </div>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+
+<footer>© <span id="year"></span> Premium Menu</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
