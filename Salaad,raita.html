@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>veg tandoori snacks • Premium Menu</title>
+  <title>Momos • Premium Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -24,7 +24,7 @@
         var(--bg);
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 24px;
     }
@@ -43,27 +43,39 @@
     .menu-grid {
       margin-top: 24px;
       display: grid;
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
     }
     .dish {
       background: var(--card);
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.08);
       border-radius: 16px;
-      padding: 16px;
+      padding: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .dish:hover {
+      transform: translateY(-4px);
+    }
+    .dish img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
     }
     .dish-title {
       font-family: 'Playfair Display', serif;
       font-size: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .price-row {
       display: flex;
       justify-content: space-between;
-    }
-    .price-label {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
-      color: var(--yellow-deep); /* same color for both */
+      color: var(--yellow-deep);
     }
     footer {
       margin-top: 32px;
@@ -77,20 +89,47 @@
 
 <div class="container">
 
-  <!-- Veg Starters -->
-<header><h1>Salaad, Raita</h1></header>
+  <header><h1>Salaad, Raita</h1></header>
   <div class="menu-grid">
-    <div class="dish"><div class="dish-title">Salaad</div><div class="price-row"><span class="price-label">₹60/-</span></div></div>
-    <div class="dish"><div class="dish-title">Plain Raita</div><div class="price-row"><span class="price-label">₹60/-</span></div></div>
-    <div class="dish"><div class="dish-title">Boondi Raita</div><div class="price-row"><span class="price-label">₹80/-</span></div></div>
-    <div class="dish"><div class="dish-title">Onion Tomato Raita</div><div class="price-row"><span class="price-label">₹100/-</span></div></div>
-     </div>
+
+    <div class="dish">
+      <img src="https://www.tasteofhome.com/wp-content/uploads/2025/01/That-Good-Salad_EXPS_FT24_6498_JR_1212_1.jpg" alt="Salaad">
+      <div class="dish-title">Salaad</div>
+      <div class="price-row"><span>₹60/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhue6AQ5esLQxNKA9OD6PyZ3e2uIwvGVJDRw&s" alt="Plain Raita">
+      <div class="dish-title">Plain Raita</div>
+      <div class="price-row"><span>₹60/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.cookwithmanali.com/wp-content/uploads/2022/04/Boondi-Raita.jpg" alt="Boondi Raita">
+      <div class="dish-title">Boondi Raita</div>
+      <div class="price-row"><span>₹80/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.indianveggiedelight.com/wp-content/uploads/2020/03/onion-tomato-raita-1-featured.jpg" alt="Onion Tomato Raita">
+      <div class="dish-title">Onion Tomato Raita</div>
+      <div class="price-row"><span>₹100/-</span></div>
+    </div>
+
   </div>
 </div>
-    <footer>© <span id="year"></span> Premium Menu</footer>
+
+
+
+
   </div>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+</div>
+
+<footer>© <span id="year"></span> Premium Menu</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
