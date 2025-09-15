@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>veg tandoori snacks • Premium Menu</title>
+  <title>Momos • Premium Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -24,7 +24,7 @@
         var(--bg);
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 24px;
     }
@@ -43,27 +43,39 @@
     .menu-grid {
       margin-top: 24px;
       display: grid;
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
     }
     .dish {
       background: var(--card);
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.08);
       border-radius: 16px;
-      padding: 16px;
+      padding: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .dish:hover {
+      transform: translateY(-4px);
+    }
+    .dish img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
     }
     .dish-title {
       font-family: 'Playfair Display', serif;
       font-size: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .price-row {
       display: flex;
       justify-content: space-between;
-    }
-    .price-label {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
-      color: var(--yellow-deep); /* same color for both */
+      color: var(--yellow-deep);
     }
     footer {
       margin-top: 32px;
@@ -77,24 +89,70 @@
 
 <div class="container">
 
-  <!-- Veg Starters -->
-<header><h1>Rice, Biryani</h1></header>
+  <header><h1>Rice, Biryani</h1></header>
   <div class="menu-grid">
-    <div class="dish"><div class="dish-title">Steam Rice </div><div class="price-row"><span class="price-label">₹70/-</span></div></div>
-    <div class="dish"><div class="dish-title">Jeera Rice</div><div class="price-row"><span class="price-label">₹90/-</span></div></div>
-    <div class="dish"><div class="dish-title">Matar Pulao</div><div class="price-row"><span class="price-label">₹110/-</span></div></div>
-    <div class="dish"><div class="dish-title">Veg Pulao</div><div class="price-row"><span class="price-label">₹130/-</span></div></div>
-    <div class="dish"><div class="dish-title">Veg Biryani</div><div class="price-row"><span class="price-label">₹169/-</span></div></div>
-    <div class="dish"><div class="dish-title">Egg Biryani</div><div class="price-row"><span class="price-label">₹200/-</span></div></div>
-    <div class="dish"><div class="dish-title">Chicken Biryani</div><div class="price-row"><span class="price-label">₹280/-</span></div></div>
-   <div class="dish"><div class="dish-title">Mutton Biryani</div><div class="price-row"><span class="price-label">₹350/-</span></div></div>
- 
-</div>
-</div>
-    <footer>© <span id="year"></span> Premium Menu</footer>
+
+    <div class="dish">
+      <img src="https://bitesinthewild.com/wp-content/uploads/2022/04/Easy-steamed-rice-mini-1.jpg" alt="Steam Rice">
+      <div class="dish-title">Steam Rice</div>
+      <div class="price-row"><span>₹70/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2025/05/jeera-rice-1-500x500.jpg" alt="Jeera Rice">
+      <div class="dish-title">Jeera Rice</div>
+      <div class="price-row"><span>₹90/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://ikneadtoeat.com/wp-content/uploads/2022/03/matar-pulao-peas-pulao-2.jpg" alt="Matar Pulao">
+      <div class="dish-title">Matar Pulao</div>
+      <div class="price-row"><span>₹110/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2018/07/pulao-recipe.jpg" alt="Veg Pulao">
+      <div class="dish-title">Veg Pulao</div>
+      <div class="price-row"><span>₹130/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2019/04/veg-biryani-recipe-500x500.jpg" alt="Veg Biryani">
+      <div class="dish-title">Veg Biryani</div>
+      <div class="price-row"><span>₹169/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://palatesdesire.com/wp-content/uploads/2022/05/Egg-biryani-recipe@palates-desire.jpg" alt="Egg Biryani">
+      <div class="dish-title">Egg Biryani</div>
+      <div class="price-row"><span>₹200/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2020/07/Chicken-Biryani-Recipe.jpg" alt="Chicken Biryani">
+      <div class="dish-title">Chicken Biryani</div>
+      <div class="price-row"><span>₹280/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2021/03/Best-Mutton-Biryani-Recipe.jpg" alt="Mutton Biryani">
+      <div class="dish-title">Mutton Biryani</div>
+      <div class="price-row"><span>₹350/-</span></div>
+    </div>
+
   </div>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+</div>
+
+
+
+  </div>
+</div>
+
+<footer>© <span id="year"></span> Premium Menu</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
