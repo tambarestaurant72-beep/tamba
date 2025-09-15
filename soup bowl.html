@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>veg tandoori snacks • Premium Menu</title>
+  <title>Momos • Premium Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -24,7 +24,7 @@
         var(--bg);
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 24px;
     }
@@ -43,27 +43,39 @@
     .menu-grid {
       margin-top: 24px;
       display: grid;
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
     }
     .dish {
       background: var(--card);
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.08);
       border-radius: 16px;
-      padding: 16px;
+      padding: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .dish:hover {
+      transform: translateY(-4px);
+    }
+    .dish img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
     }
     .dish-title {
       font-family: 'Playfair Display', serif;
       font-size: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .price-row {
       display: flex;
       justify-content: space-between;
-    }
-    .price-label {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
-      color: var(--yellow-deep); /* same color for both */
+      color: var(--yellow-deep);
     }
     footer {
       margin-top: 32px;
@@ -77,22 +89,57 @@
 
 <div class="container">
 
-  <!-- Veg Starters -->
-<header><h1>Soup Bowl</h1></header>
+  <header><h1>Soup Bowl</h1></header>
   <div class="menu-grid">
-    <div class="dish"><div class="dish-title">Veg Sweet Corn</div><div class="price-row"><span class="price-label">₹70/-</span></div></div>
-    <div class="dish"><div class="dish-title">Veg Hot & Sour</div><div class="price-row"><span class="price-label">₹70/-</span></div></div>
-    <div class="dish"><div class="dish-title">Veg Manchow</div><div class="price-row"><span class="price-label">₹70/-</span></div></div>
-    <div class="dish"><div class="dish-title">Tomato Soup</div><div class="price-row"><span class="price-label">₹80/-</span></div></div>
-    <div class="dish"><div class="dish-title">Chicken Hot & Soup</div><div class="price-row"><span class="price-label">₹100/-</span></div></div>
-    <div class="dish"><div class="dish-title">Chicken Manchow</div><div class="price-row"><span class="price-label">₹110/-</span></div></div>
-  </div>
+
+    <div class="dish">
+      <img src="https://www.indianrecipeinfo.com/wp-content/uploads/2011/12/Sweet-Corn-Soup.jpg" alt="Veg Sweet Corn Soup">
+      <div class="dish-title">Veg Sweet Corn</div>
+      <div class="price-row"><span>₹70/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.cookwithmanali.com/wp-content/uploads/2024/01/Hot-and-Sour-Soup-Vegetarian.jpg" alt="Veg Hot & Sour Soup">
+      <div class="dish-title">Veg Hot & Sour</div>
+      <div class="price-row"><span>₹70/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://greenbowl2soul.com/wp-content/uploads/2020/02/veg-manchow-soup.jpg" alt="Veg Manchow Soup">
+      <div class="dish-title">Veg Manchow</div>
+      <div class="price-row"><span>₹70/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/11/tomato-soup-recipe.jpg" alt="Tomato Soup">
+      <div class="dish-title">Tomato Soup</div>
+      <div class="price-row"><span>₹80/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.yummytummyaarthi.com/wp-content/uploads/2022/07/hot-and-sour-chicken-soup-1-500x500.jpg" alt="Chicken Hot & Soup">
+      <div class="dish-title">Chicken Hot & Soup</div>
+      <div class="price-row"><span>₹100/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://sinfullyspicy.com/wp-content/uploads/2023/12/1200-by-1200-images-1.jpg" alt="Chicken Manchow Soup">
+      <div class="dish-title">Chicken Manchow</div>
+      <div class="price-row"><span>₹110/-</span></div>
+    </div>
+
   </div>
 </div>
-    <footer>© <span id="year"></span> Premium Menu</footer>
+
+
   </div>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+</div>
+
+<footer>© <span id="year"></span> Premium Menu</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
