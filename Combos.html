@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="hi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>veg tandoori snacks • Premium Menu</title>
+  <title>Momos • Premium Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -24,7 +24,7 @@
         var(--bg);
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 24px;
     }
@@ -43,27 +43,39 @@
     .menu-grid {
       margin-top: 24px;
       display: grid;
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
     }
     .dish {
       background: var(--card);
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.08);
       border-radius: 16px;
-      padding: 16px;
+      padding: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .dish:hover {
+      transform: translateY(-4px);
+    }
+    .dish img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
     }
     .dish-title {
       font-family: 'Playfair Display', serif;
       font-size: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .price-row {
       display: flex;
       justify-content: space-between;
-    }
-    .price-label {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
-      color: var(--yellow-deep); /* same color for both */
+      color: var(--yellow-deep);
     }
     footer {
       margin-top: 32px;
@@ -77,21 +89,50 @@
 
 <div class="container">
 
-  <!-- Veg Starters -->
-<header><h1>Combos</h1></header>
+  <header><h1>Combos</h1></header>
   <div class="menu-grid">
-    <div class="dish"><div class="dish-title">Combo 1 (Noodles + Chilli Potato + Coke)</div><div class="price-row"><span class="price-label">₹149/-</span></div></div>
-    <div class="dish"><div class="dish-title">Combo 2 (Noodles + Manchurian + Coke)</div><div class="price-row"><span class="price-label">₹169/-</span></div></div>
-    <div class="dish"><div class="dish-title">Combo 3 (Veg Manchurian + Fried Rice + Coke)</div><div class="price-row"><span class="price-label">₹179/-</span></div></div>
-    <div class="dish"><div class="dish-title">Combo 4 (Chilli Paneer + Fried Rice + Coke)</div><div class="price-row"><span class="price-label">₹189/-</span></div></div>
-    <div class="dish"><div class="dish-title">Combo 5 (Veg Steam Momos + Veg Spring Roll + Noodles + Coke)</div><div class="price-row"><span class="price-label">₹199/-</span></div></div>
+
+    <div class="dish">
+      <img src="https://premasculinary.com/wp-content/uploads/2020/03/Honey-Chili-Potato-recipe-with-Hakka-Noodles.jpg" alt="beverages 1">
+      <div class="dish-title">Combo 1 (Noodles + Chilli Potato + Coke)</div>
+      <div class="price-row"><span> ₹149/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQxhthI1TLYKDFls8Fj8TKoV-Ynd1oHbtaUg&s" alt="beverages 2">
+      <div class="dish-title">Combo 2 (Noodles + Manchurian + Coke)</div>
+      <div class="price-row"><span> ₹169/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://b.zmtcdn.com/data/dish_photos/cc6/50c3fdeb174bdbd1dda777cc93782cc6.jpg" alt="beverages 3">
+      <div class="dish-title">Combo 3 (Veg Manchurian + Fried Rice + Coke)</div>
+      <div class="price-row"><span> ₹179/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://b.zmtcdn.com/data/dish_photos/708/abd120a0200151b98279fcdf98d47708.jpg" alt="beverages 3">
+      <div class="dish-title">Combo 4 (Chilli Paneer + Fried Rice + Coke)</div>
+      <div class="price-row"><span> ₹189/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://b.zmtcdn.com/data/dish_photos/080/4e0082c3307f0e994a001ae91aef2080.jpg" alt="beverages 3">
+      <div class="dish-title">Combo 5 (Veg Steam Momos + Veg Spring Roll + Noodles + Coke)</div>
+      <div class="price-row"><span> ₹199/-</span></div>
+    </div>
+
    
+
   </div>
 </div>
-    <footer>© <span id="year"></span> Premium Menu</footer>
-  </div>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+
+<footer>© <span id="year"></span> Premium Menu</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
+
