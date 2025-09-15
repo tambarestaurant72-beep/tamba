@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>veg tandoori snacks • Premium Menu</title>
+  <title>Momos • Premium Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -24,7 +24,7 @@
         var(--bg);
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 24px;
     }
@@ -43,27 +43,39 @@
     .menu-grid {
       margin-top: 24px;
       display: grid;
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
     }
     .dish {
       background: var(--card);
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.08);
       border-radius: 16px;
-      padding: 16px;
+      padding: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .dish:hover {
+      transform: translateY(-4px);
+    }
+    .dish img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
     }
     .dish-title {
       font-family: 'Playfair Display', serif;
       font-size: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .price-row {
       display: flex;
       justify-content: space-between;
-    }
-    .price-label {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
-      color: var(--yellow-deep); /* same color for both */
+      color: var(--yellow-deep);
     }
     footer {
       margin-top: 32px;
@@ -75,27 +87,91 @@
 </head>
 <body>
 
-<div class="container">
+  <div class="container">
 
-  <!-- Veg Starters -->
-<header><h1>Non-Veg Tandoori Snacks</h1></header>
+  <header><h1>Non-Veg Tandoori Snacks</h1></header>
   <div class="menu-grid">
-    <div class="dish"><div class="dish-title">Tandoori Chicken</div><div class="price-row"><span class="price-label">₹250/-</span><span class="price-label">₹500/-</span></div></div>
-    <div class="dish"><div class="dish-title">Bhatti Murga</div><div class="price-row"><span class="price-label">₹280/-</span><span class="price-label">₹550/-</span></div></div>
-    <div class="dish"><div class="dish-title">Haryali Chicken</div><div class="price-row"><span class="price-label">₹290/-</span><span class="price-label">₹570/-</span></div></div>
-    <div class="dish"><div class="dish-title">Afghani Chicken</div><div class="price-row"><span class="price-label">₹300/-</span><span class="price-label">₹570/-</span></div></div>
-    <div class="dish"><div class="dish-title">Garlic Chicken</div><div class="price-row"><span class="price-label">₹300/-</span><span class="price-label">₹570/-</span></div></div>
-    <div class="dish"><div class="dish-title">Peri Peri Chicken</div><div class="price-row"><span class="price-label">₹350/-</span><span class="price-label">₹650/-</span></div></div>
-    <div class="dish"><div class="dish-title">Malai Chicken Tikka</div><div class="price-row"><span class="price-label">₹300/-</span><span class="price-label">₹550/-</span></div></div>
-    <div class="dish"><div class="dish-title">Garlic Chicken Tikka</div><div class="price-row"><span class="price-label">₹320/-</span><span class="price-label">₹600/-</span></div></div>
-    <div class="dish"><div class="dish-title">Haryali Chicken Tikka</div><div class="price-row"><span class="price-label">₹330/-</span><span class="price-label">₹610/-</span></div></div>
-    <div class="dish"><div class="dish-title">Achari Chicken Tikka</div><div class="price-row"><span class="price-label">₹350/-</span><span class="price-label">₹650/-</span></div></div>
-</div>
-</div>
-    <footer>© <span id="year"></span> Premium Menu</footer>
+
+    <div class="dish">
+      <img src="https://static01.nyt.com/images/2024/05/16/multimedia/fs-tandoori-chicken-hmjq/fs-tandoori-chicken-hmjq-videoSixteenByNineJumbo1600.jpg" alt="Tandoori Chicken">
+      <div class="dish-title">Tandoori Chicken</div>
+      <div class="price-row"><span>Half ₹250/-</span> | <span>Full ₹500/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.ndtv.com/cooks/images/bhati-murgh-new.jpg" alt="Bhatti Murga">
+      <div class="dish-title">Bhatti Murga</div>
+      <div class="price-row"><span>Half ₹280/-</span> | <span>Full ₹550/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://ikneadtoeat.com/wp-content/uploads/2021/10/hariyali-chicken-recipe-2.jpg" alt="Haryali Chicken">
+      <div class="dish-title">Haryali Chicken</div>
+      <div class="price-row"><span>Half ₹290/-</span> | <span>Full ₹570/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL8oF7lCNZ-nsc-q6g6SZ5t_gDU024h8sM5w&s" alt="Afghani Chicken">
+      <div class="dish-title">Afghani Chicken</div>
+      <div class="price-row"><span>Half ₹300/-</span> | <span>Full ₹570/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb4lYgqml06PYSF65pCRbHx65ECEFaqkoEUQ&s" alt="Garlic Chicken">
+      <div class="dish-title">Garlic Chicken</div>
+      <div class="price-row"><span>Half ₹300/-</span> | <span>Full ₹570/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.chilipeppermadness.com/wp-content/uploads/2024/03/Peri-Peri-Chicken-Recipe-SQ1b.jpg" alt="Peri Peri Chicken">
+      <div class="dish-title">Peri Peri Chicken</div>
+      <div class="price-row"><span>Half ₹350/-</span> | <span>Full ₹650/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://untoldrecipesbynosheen.com/wp-content/uploads/2024/05/malai-chicken-tikka-featured.jpg" alt="Malai Chicken Tikka">
+      <div class="dish-title">Malai Chicken Tikka</div>
+      <div class="price-row"><span>Half ₹300/-</span> | <span>Full ₹550/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://fromykitchen.com/wp-content/uploads/2016/03/eb8bb707d9e94812896d6a574c206762-1024x576.jpg" alt="Garlic Chicken Tikka">
+      <div class="dish-title">Garlic Chicken Tikka</div>
+      <div class="price-row"><span>Half ₹320/-</span> | <span>Full ₹600/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.eatdrinkpure.com/wp-content/uploads/2025/03/Hariyali-Chicken-Tikka-Hero.jpg" alt="Haryali Chicken Tikka">
+      <div class="dish-title">Haryali Chicken Tikka</div>
+      <div class="price-row"><span>Half ₹330/-</span> | <span>Full ₹610/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkefix7IIuSU9NLgaovT9zE9t-BtdUBK7Gng&s" alt="Achari Chicken Tikka">
+      <div class="dish-title">Achari Chicken Tikka</div>
+      <div class="price-row"><span>Half ₹350/-</span> | <span>Full ₹650/-</span></div>
+    </div>
+
   </div>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+</div>
+
+
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+
+  </div>
+</div>
+
+<footer>© <span id="year"></span> Premium Menu</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
