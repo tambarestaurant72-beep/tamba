@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>veg tandoori snacks • Premium Menu</title>
+  <title>Momos • Premium Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -24,7 +24,7 @@
         var(--bg);
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 24px;
     }
@@ -43,27 +43,39 @@
     .menu-grid {
       margin-top: 24px;
       display: grid;
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
     }
     .dish {
       background: var(--card);
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.08);
       border-radius: 16px;
-      padding: 16px;
+      padding: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .dish:hover {
+      transform: translateY(-4px);
+    }
+    .dish img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
     }
     .dish-title {
       font-family: 'Playfair Display', serif;
       font-size: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .price-row {
       display: flex;
       justify-content: space-between;
-    }
-    .price-label {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
-      color: var(--yellow-deep); /* same color for both */
+      color: var(--yellow-deep);
     }
     footer {
       margin-top: 32px;
@@ -75,24 +87,67 @@
 </head>
 <body>
 
-<div class="container">
+ <div class="container">
 
-  <!-- Veg Starters -->
-<header><h1>Noodles</h1></header>
+  <header><h1>Noodles</h1></header>
   <div class="menu-grid">
-    <div class="dish"><div class="dish-title">Veg Hakka Noodles</div><div class="price-row"><span class="price-label">₹100/-</span></div></div>
-    <div class="dish"><div class="dish-title">Chilli Garlic Noodles</div><div class="price-row"><span class="price-label">₹130/-</span></div></div>
-    <div class="dish"><div class="dish-title">Egg Noodles</div><div class="price-row"><span class="price-label">₹200/-</span></div></div>
-    <div class="dish"><div class="dish-title">Veg Singapori Noodles</div><div class="price-row"><span class="price-label">₹170/-</span></div></div>
-    <div class="dish"><div class="dish-title">Paneer Chilli Garlic</div><div class="price-row"><span class="price-label">₹200/-</span></div></div>
-    <div class="dish"><div class="dish-title">Chicken Noodles</div><div class="price-row"><span class="price-label">₹250/-</span></div></div>
-    <div class="dish"><div class="dish-title">Chicken Chilli Garlic</div><div class="price-row"><span class="price-label">₹300/-</span></div></div>
+
+    <div class="dish">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8QmnRyLKIOqyKHyqsjGr8DPltNiWrYMDGlA&s" alt="Veg Hakka Noodles">
+      <div class="dish-title">Veg Hakka Noodles</div>
+      <div class="price-row"><span>₹100/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6lask4JdkF0H-FzmTUNVcktCsidYGS_TdsQ&s" alt="Chilli Garlic Noodles">
+      <div class="dish-title">Chilli Garlic Noodles</div>
+      <div class="price-row"><span>₹130/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.sharmispassions.com/wp-content/uploads/2012/01/EggNoodles3-500x500.jpg" alt="Egg Noodles">
+      <div class="dish-title">Egg Noodles</div>
+      <div class="price-row"><span>₹200/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaKoZeFEPU1_lsf_3PPGXRS-0BF5oA9Rp1Og&s" alt="Veg Singapori Noodles">
+      <div class="dish-title">Veg Singapori Noodles</div>
+      <div class="price-row"><span>₹170/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://madscookhouse.com/wp-content/uploads/2022/11/Garlic-Chilli-Paneer.jpg" alt="Paneer Chilli Garlic">
+      <div class="dish-title">Paneer Chilli Garlic</div>
+      <div class="price-row"><span>₹200/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://sinfullyspicy.com/wp-content/uploads/2023/01/1200-by-1200-images-5.jpg" alt="Chicken Noodles">
+      <div class="dish-title">Chicken Noodles</div>
+      <div class="price-row"><span>₹250/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.whiskaffair.com/wp-content/uploads/2015/09/Chili-Garlic-Chicken-2-3.jpg" alt="Chicken Chilli Garlic">
+      <div class="dish-title">Chicken Chilli Garlic</div>
+      <div class="price-row"><span>₹300/-</span></div>
+    </div>
+
   </div>
 </div>
-    <footer>© <span id="year"></span> Premium Menu</footer>
+
+</div>
+
+
   </div>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+</div>
+
+<footer>© <span id="year"></span> Premium Menu</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
