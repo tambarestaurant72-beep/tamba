@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>veg tandoori snacks • Premium Menu</title>
+  <title>Momos • Premium Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -24,7 +24,7 @@
         var(--bg);
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 24px;
     }
@@ -43,27 +43,39 @@
     .menu-grid {
       margin-top: 24px;
       display: grid;
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
     }
     .dish {
       background: var(--card);
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.08);
       border-radius: 16px;
-      padding: 16px;
+      padding: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .dish:hover {
+      transform: translateY(-4px);
+    }
+    .dish img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
     }
     .dish-title {
       font-family: 'Playfair Display', serif;
       font-size: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .price-row {
       display: flex;
       justify-content: space-between;
-    }
-    .price-label {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
-      color: var(--yellow-deep); /* same color for both */
+      color: var(--yellow-deep);
     }
     footer {
       margin-top: 32px;
@@ -77,27 +89,88 @@
 
 <div class="container">
 
-  <!-- Veg Starters -->
-<header><h1>Roti, Naan, Paratha</h1></header>
+  <header><h1>Roti, Naan, Paratha</h1></header>
   <div class="menu-grid">
-    <div class="dish"><div class="dish-title">Tandoori Roti</div><div class="price-row"><span class="price-label">₹10/-</span></div></div>
-    <div class="dish"><div class="dish-title">Butter Tandoori</div><div class="price-row"><span class="price-label">₹15/-</span></div></div>
-    <div class="dish"><div class="dish-title">Missi Roti</div><div class="price-row"><span class="price-label">₹20/-</span></div></div>
-    <div class="dish"><div class="dish-title">Laccha Paratha</div><div class="price-row"><span class="price-label">₹35/-</span></div></div>
-    <div class="dish"><div class="dish-title">Plain Naan</div><div class="price-row"><span class="price-label">₹30/-</span></div></div>
-    <div class="dish"><div class="dish-title">Butter Naan</div><div class="price-row"><span class="price-label">₹40/-</span></div></div>
-    <div class="dish"><div class="dish-title">Garlic Naan</div><div class="price-row"><span class="price-label">₹45/-</span></div></div>
-    <div class="dish"><div class="dish-title">Aaloo Pyaz Paratha</div><div class="price-row"><span class="price-label">₹50/-</span></div></div>
-    <div class="dish"><div class="dish-title">Paneer Pyaz Paratha</div><div class="price-row"><span class="price-label">₹70/-</span></div></div>
-    <div class="dish"><div class="dish-title">Chicken Keema Naan</div><div class="price-row"><span class="price-label">₹80/-</span></div></div>
-    <div class="dish"><div class="dish-title">Onion Kulcha</div><div class="price-row"><span class="price-label">₹40/-</span></div></div>
-   
-</div>
-</div>
-    <footer>© <span id="year"></span> Premium Menu</footer>
+
+    <div class="dish">
+      <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2023/09/tandoori-roti-recipe.jpg" alt="Tandoori Roti">
+      <div class="dish-title">Tandoori Roti</div>
+      <div class="price-row"><span>₹10/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://sattvakitchen.com/wp-content/uploads/2024/05/TANDOORI-ROTI-shutterstock_797275993-copy.jpg" alt="Butter Tandoori">
+      <div class="dish-title">Butter Tandoori</div>
+      <div class="price-row"><span>₹15/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwx8kkjHxHkEvmywspqWTqeVA2k0p8Wcye4w&s" alt="Missi Roti">
+      <div class="dish-title">Missi Roti</div>
+      <div class="price-row"><span>₹20/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8JCQyqHRMsBXMJWqYrKnRJGUxm39MrRTjVQ&s" alt="Laccha Paratha">
+      <div class="dish-title">Laccha Paratha</div>
+      <div class="price-row"><span>₹35/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2025/05/naan-3-500x500.jpg" alt="Plain Naan">
+      <div class="dish-title">Plain Naan</div>
+      <div class="price-row"><span>₹30/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu0yBjOvU4BwUI5r6tJhYU5CQlAYOrqHphIg&s" alt="Butter Naan">
+      <div class="dish-title">Butter Naan</div>
+      <div class="price-row"><span>₹40/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://allwaysdelicious.com/wp-content/uploads/2022/04/garlic-butter-naan-4.jpg" alt="Garlic Naan">
+      <div class="dish-title">Garlic Naan</div>
+      <div class="price-row"><span>₹45/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://i0.wp.com/www.blissofcooking.com/wp-content/uploads/2017/07/Aloo-Pyaz-Ka-Paratha-MOP.jpg?resize=740%2C493&ssl=1" alt="Aaloo Pyaz Paratha">
+      <div class="dish-title">Aaloo Pyaz Paratha</div>
+      <div class="price-row"><span>₹50/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://media.chefdehome.com/750/0/0/aloo-paratha/best-aloo-paratha.jpg" alt="Paneer Pyaz Paratha">
+      <div class="dish-title">Paneer Pyaz Paratha</div>
+      <div class="price-row"><span>₹70/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://i0.wp.com/cookwithnoorain.com/wp-content/uploads/2024/03/IMG_9253-scaled.jpg?w=1080&ssl=1" alt="Chicken Keema Naan">
+      <div class="dish-title">Chicken Keema Naan</div>
+      <div class="price-row"><span>₹80/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.cookwithmanali.com/wp-content/uploads/2014/08/Onion-Kulcha-Recipe.jpg" alt="Onion Kulcha">
+      <div class="dish-title">Onion Kulcha</div>
+      <div class="price-row"><span>₹40/-</span></div>
+    </div>
+
   </div>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+</div>
+
+
+
+  </div>
+</div>
+
+<footer>© <span id="year"></span> Premium Menu</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
