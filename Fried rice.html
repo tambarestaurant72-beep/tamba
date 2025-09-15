@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="hi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>veg tandoori snacks • Premium Menu</title>
+  <title>Momos • Premium Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -24,7 +24,7 @@
         var(--bg);
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 24px;
     }
@@ -43,27 +43,39 @@
     .menu-grid {
       margin-top: 24px;
       display: grid;
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
     }
     .dish {
       background: var(--card);
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.08);
       border-radius: 16px;
-      padding: 16px;
+      padding: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .dish:hover {
+      transform: translateY(-4px);
+    }
+    .dish img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
     }
     .dish-title {
       font-family: 'Playfair Display', serif;
       font-size: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .price-row {
       display: flex;
       justify-content: space-between;
-    }
-    .price-label {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
-      color: var(--yellow-deep); /* same color for both */
+      color: var(--yellow-deep);
     }
     footer {
       margin-top: 32px;
@@ -77,21 +89,55 @@
 
 <div class="container">
 
-  <!-- Veg Starters -->
-<header><h1>Fried Rice</h1></header>
+  <header><h1>Fried Rice</h1></header>
   <div class="menu-grid">
-    <div class="dish"><div class="dish-title">Veg Fried Rice</div><div class="price-row"><span class="price-label">₹130/-</span></div></div>
-    <div class="dish"><div class="dish-title">Garlic Fried Rice</div><div class="price-row"><span class="price-label">₹150/-</span></div></div>
-    <div class="dish"><div class="dish-title">Paneer Fried Rice</div><div class="price-row"><span class="price-label">₹180/-</span></div></div>
-    <div class="dish"><div class="dish-title">Egg Fried Rice</div><div class="price-row"><span class="price-label">₹200/-</span></div></div>
-    <div class="dish"><div class="dish-title">Chicken Fried Rice</div><div class="price-row"><span class="price-label">₹250/-</span></div></div>
-  </div>
+
+    <div class="dish">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlSJrMlNj7HvyrNNJG6U82ady6rciMYqQtTw&s" alt="Veg Fried Rice">
+      <div class="dish-title">Veg Fried Rice</div>
+      <div class="price-row"><span>₹130/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://takestwoeggs.com/wp-content/uploads/2024/04/Garlic-Fried-Rice-Sinangag-1.jpg" alt="Garlic Fried Rice">
+      <div class="dish-title">Garlic Fried Rice</div>
+      <div class="price-row"><span>₹150/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.indianveggiedelight.com/wp-content/uploads/2023/09/paneer-fried-rice-featured.jpg" alt="Paneer Fried Rice">
+      <div class="dish-title">Paneer Fried Rice</div>
+      <div class="price-row"><span>₹180/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.bigfattummy.com/wp-content/uploads/2017/09/Prawn-Egg-Fried-Rice-07-1200x675.jpg" alt="Egg Fried Rice">
+      <div class="dish-title">Egg Fried Rice</div>
+      <div class="price-row"><span>₹200/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://iamhomesteader.com/wp-content/uploads/2025/05/Bang-Bang-Chicken-Fried-Rice-2.jpg" alt="Chicken Fried Rice">
+      <div class="dish-title">Chicken Fried Rice</div>
+      <div class="price-row"><span>₹250/-</span></div>
+    </div>
+
   </div>
 </div>
-    <footer>© <span id="year"></span> Premium Menu</footer>
+
+
   </div>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+</div>
+
+
+  </div>
+</div>
+
+<footer>© <span id="year"></span> Premium Menu</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
