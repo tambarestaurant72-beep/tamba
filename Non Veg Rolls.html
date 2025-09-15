@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>veg tandoori snacks • Premium Menu</title>
+  <title>Momos • Premium Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -24,7 +24,7 @@
         var(--bg);
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 24px;
     }
@@ -43,27 +43,39 @@
     .menu-grid {
       margin-top: 24px;
       display: grid;
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
     }
     .dish {
       background: var(--card);
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.08);
       border-radius: 16px;
-      padding: 16px;
+      padding: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .dish:hover {
+      transform: translateY(-4px);
+    }
+    .dish img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
     }
     .dish-title {
       font-family: 'Playfair Display', serif;
       font-size: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .price-row {
       display: flex;
       justify-content: space-between;
-    }
-    .price-label {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
-      color: var(--yellow-deep); /* same color for both */
+      color: var(--yellow-deep);
     }
     footer {
       margin-top: 32px;
@@ -77,21 +89,51 @@
 
 <div class="container">
 
-  <!-- Veg Starters -->
-<header><h1>Non Veg Rolls</h1></header>
+  <header><h1>Non Veg Rolls</h1></header>
   <div class="menu-grid">
-    <div class="dish"><div class="dish-title">Chicken Spring Roll</div><div class="price-row"><span class="price-label">₹160/-</span></div></div>
-    <div class="dish"><div class="dish-title">Chicken Sheek Roll</div><div class="price-row"><span class="price-label">₹200/-</span></div></div>
-    <div class="dish"><div class="dish-title">Chicken Tikka Roll</div><div class="price-row"><span class="price-label">₹280/-</span></div></div>
-    <div class="dish"><div class="dish-title">Malai Chicken Tikka Roll</div><div class="price-row"><span class="price-label">₹360/-</span></div></div>
-    <div class="dish"><div class="dish-title">Peri Peri Chicken Tikka Roll</div><div class="price-row"><span class="price-label">₹380/-</span></div></div>
-  </div>
+
+    <div class="dish">
+      <img src="https://c.ndtvimg.com/2021-12/jl0b9flo_spring-rolls_625x300_22_December_21.jpg" alt="Chicken Spring Roll">
+      <div class="dish-title">Chicken Spring Roll</div>
+      <div class="price-row"><span>₹160/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.greenchickchop.in/cdn/shop/files/ChickenSeekhRoll_result.webp?v=1682591949" alt="Chicken Sheek Roll">
+      <div class="dish-title">Chicken Sheek Roll</div>
+      <div class="price-row"><span>₹200/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://bakewithzoha.com/wp-content/uploads/2024/03/chicken-tikka-paratha-rolls-featured.jpg" alt="Chicken Tikka Roll">
+      <div class="dish-title">Chicken Tikka Roll</div>
+      <div class="price-row"><span>₹280/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://i.ytimg.com/vi/r9iDeDiLZ5k/maxresdefault.jpg" alt="Malai Chicken Tikka Roll">
+      <div class="dish-title">Malai Chicken Tikka Roll</div>
+      <div class="price-row"><span>₹360/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://theolddelhi.com/wp-content/uploads/2021/08/1027-chicken-tikka-roll-min.jpg" alt="Peri Peri Chicken Tikka Roll">
+      <div class="dish-title">Peri Peri Chicken Tikka Roll</div>
+      <div class="price-row"><span>₹380/-</span></div>
+    </div>
+
   </div>
 </div>
-    <footer>© <span id="year"></span> Premium Menu</footer>
+
+
   </div>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+</div>
+
+<footer>© <span id="year"></span> Premium Menu</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
