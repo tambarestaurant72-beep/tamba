@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>veg tandoori snacks • Premium Menu</title>
+  <title>Momos • Premium Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -24,7 +24,7 @@
         var(--bg);
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 24px;
     }
@@ -43,27 +43,39 @@
     .menu-grid {
       margin-top: 24px;
       display: grid;
-      gap: 16px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
     }
     .dish {
       background: var(--card);
-      border: 1px solid rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.08);
       border-radius: 16px;
-      padding: 16px;
+      padding: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .dish:hover {
+      transform: translateY(-4px);
+    }
+    .dish img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
     }
     .dish-title {
       font-family: 'Playfair Display', serif;
       font-size: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .price-row {
       display: flex;
       justify-content: space-between;
-    }
-    .price-label {
-      font-size: 16px;
+      font-size: 15px;
       font-weight: 600;
-      color: var(--yellow-deep); /* same color for both */
+      color: var(--yellow-deep);
     }
     footer {
       margin-top: 32px;
@@ -77,28 +89,91 @@
 
 <div class="container">
 
-  <!-- Veg Starters -->
-<header><h1>Veg Tandoori Snacks</h1></header>
+  <header><h1>Veg Tandoori Snacks</h1></header>
   <div class="menu-grid">
-    <div class="dish"><div class="dish-title">Tandoori Chaap</div><div class="price-row"><span class="price-label">₹179/-</span></div></div>
-    <div class="dish"><div class="dish-title">Lahori Chaap</div><div class="price-row"><span class="price-label">₹200/-</span></div></div>
-    <div class="dish"><div class="dish-title">Haryali Chaap</div><div class="price-row"><span class="price-label">₹180/-</span></div></div>
-    <div class="dish"><div class="dish-title">Achari Chaap</div><div class="price-row"><span class="price-label">₹190/-</span></div></div>
-    <div class="dish"><div class="dish-title">Malai Chaap</div><div class="price-row"><span class="price-label">₹200/-</span></div></div>
-    <div class="dish"><div class="dish-title">Garlic Chaap</div><div class="price-row"><span class="price-label">₹210/-</span></div></div>
-    <div class="dish"><div class="dish-title">Paneer Tikka</div><div class="price-row"><span class="price-label">₹230/-</span></div></div>
-    <div class="dish"><div class="dish-title">Paneer Tikka Kali Mirch</div><div class="price-row"><span class="price-label">₹250/-</span></div></div>
-    <div class="dish"><div class="dish-title">Achari Paneer Tikka</div><div class="price-row"><span class="price-label">₹280/-</span></div></div>
-    <div class="dish"><div class="dish-title">Malai Paneer Tikka</div><div class="price-row"><span class="price-label">₹300/-</span></div></div>
-    <div class="dish"><div class="dish-title">Mushroom Tikka</div><div class="price-row"><span class="price-label">₹320/-</span></div></div>
-    <div class="dish"><div class="dish-title">Malai Mushroom Tikka</div><div class="price-row"><span class="price-label">₹350/-</span></div></div>
-  </div>
+
+    <div class="dish">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfWrWgiTBOcpm9gJpj0EguY9cl1GotzdTwOA&s" alt="Tandoori Chaap">
+      <div class="dish-title">Tandoori Chaap</div>
+      <div class="price-row"><span>₹179/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://i.ytimg.com/vi/rFVdghUfvSU/hq720_2.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAAlAADIQj0AgKJD8AEB-AGMAoAC4AOKAgwIABABGHIgUygoMA8=&rs=AOn4CLBMCoS9IZ69rdhyi95Rq67LYkhegg" alt="Lahori Chaap">
+      <div class="dish-title">Lahori Chaap</div>
+      <div class="price-row"><span>₹200/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.livehindustan.com/lh-img/uploadimage/library/2022/10/08/16_9/16_9_6/hariyali_chaap_1665190140.jpg" alt="Haryali Chaap">
+      <div class="dish-title">Haryali Chaap</div>
+      <div class="price-row"><span>₹180/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://madscookhouse.com/wp-content/uploads/2021/11/Achari-Soya-Chaap-500x500.jpg" alt="Achari Chaap">
+      <div class="dish-title">Achari Chaap</div>
+      <div class="price-row"><span>₹190/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.playfulcooking.com/wp-content/uploads/2024/06/malai-soya-chaap-04.jpg" alt="Malai Chaap">
+      <div class="dish-title">Malai Chaap</div>
+      <div class="price-row"><span>₹200/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://blog.swiggy.com/wp-content/uploads/2024/10/Image-6_chilli-garlic-chaap-1024x538.png" alt="Garlic Chaap">
+      <div class="dish-title">Garlic Chaap</div>
+      <div class="price-row"><span>₹210/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx4JCtjJnuFSXTEBClNiJCykZsOl_DYYmNPQ&s" alt="Paneer Tikka">
+      <div class="dish-title">Paneer Tikka</div>
+      <div class="price-row"><span>₹230/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://static.toiimg.com/thumb/56933985.cms?width=1200&height=900" alt="Paneer Tikka Kali Mirch">
+      <div class="dish-title">Paneer Tikka Kali Mirch</div>
+      <div class="price-row"><span>₹250/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://j6e2i8c9.delivery.rocketcdn.me/wp-content/uploads/2015/04/Achari-paneer-tikka-recipe-6.jpg" alt="Achari Paneer Tikka">
+      <div class="dish-title">Achari Paneer Tikka</div>
+      <div class="price-row"><span>₹280/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2017/11/malai-paneer-tikka-recipe-1.jpg" alt="Malai Paneer Tikka">
+      <div class="dish-title">Malai Paneer Tikka</div>
+      <div class="price-row"><span>₹300/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://www.cookwithmanali.com/wp-content/uploads/2019/07/Mushroom-Tikka-500x500.jpg" alt="Mushroom Tikka">
+      <div class="dish-title">Mushroom Tikka</div>
+      <div class="price-row"><span>₹320/-</span></div>
+    </div>
+
+    <div class="dish">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTicZncZg05yxd-N8S4v_vPLME5zUiwAa3TSQ&s" alt="Malai Mushroom Tikka">
+      <div class="dish-title">Malai Mushroom Tikka</div>
+      <div class="price-row"><span>₹350/-</span></div>
+    </div>
+
   </div>
 </div>
-    <footer>© <span id="year"></span> Premium Menu</footer>
-  </div>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+
+</div>
+
+<footer>© <span id="year"></span> Premium Menu</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
